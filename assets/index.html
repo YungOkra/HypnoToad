@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>🐸🐸🐸</title>
+	<link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+	<object data="hypnotoad.svg" type="image/svg+xml"></object>
+    <div id="shadow" onclick="start()"></div>
+    <script src="SeamlessLoop.js"></script>
+	<script>
+        function start(){
+            let x = document.getElementById("shadow");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+            var loop = new SeamlessLoop();
+            loop.addUri("hypnotoad.wav", 8057, "toad");
+            loop.callback(soundsLoaded);
+            function soundsLoaded() {
+                loop.start("toad");
+            };
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: url("hypno.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes scroll {
+    100%{
+     background-position:0px -3000px;
+   }
+ }
+
+#shadow{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    z-index: 9999;
+}
+
